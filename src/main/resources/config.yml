@@ -1,0 +1,567 @@
+# SurealmsEnchant Configuration File - Advanced Enchanting System
+ashes-menu:
+  sound:
+    name: 'ENTITY_BLAZE_SHOOT'
+    pitch: 1.3
+    volume: 1
+  input-slots: [0, 1, 2]
+  title: "Ashes Conversion"
+  convert-button:
+    material: STICK
+    name: TEST
+    lore:
+      - 'TEST'
+    custom-model-data: 1
+  output-slot: 15
+  convert-slot: 13
+  fill-item:
+    material: "GRAY_STAINED_GLASS_PANE"
+    custom-model-data: 0
+gui_title_placeholders:
+  tier1:
+    has_enchants: "Yes"
+    no_enchants: "No"
+  tier2:
+    has_enchants: "Yes"
+    no_enchants: "No"
+  tier3:
+    has_enchants: "Yes"
+    no_enchants: "No"
+
+enchantment_option_unavailable:
+  material: "BARRIER"
+  custom_model_data: 0
+  display_name: "§cUnavailable"
+  lore:
+    - "§cYou do not have enough"
+    - "§cEXP or money for this."
+    - ""
+    - "§cCost: §6%cost%"
+    - "§cRequired EXP: §e%exp%"
+
+enchanting:
+  success_rate_range:
+    min: 50.0
+    max: 90.0
+  anvil-failure-chance-range:
+    min: 5.0
+    max: 25.0
+  result_lore:
+    success:
+      enabled: true
+      lines:
+        - '<!italic><green>Enchantment successful!'
+        - '<!italic><gray>Success rate: <white>{chance}%'
+        - '<!italic><gray>Failure rate: <white>{anvil_chance}%'
+    failure:
+      enabled: true
+      lines:
+        - '<!italic><red>Enchantment failed!'
+    destruction:
+      enabled: true
+      lines:
+        - '<!italic><dark_red>Item has been destroyed!'
+  gui-blacklist:
+    - "my_custom_pack:super_jump"
+    - "excellentenchants:auto_smelt"
+  # Enable Vault economy integration
+  enable-vault: true
+
+  # Enable XP level requirements
+  enable-xp-requirements: true
+
+  # Tier configurations
+  tier1:
+    required-level: 5
+    base-cost: 100.0
+
+  tier2:
+    required-level: 15
+    base-cost: 250.0
+
+  tier3:
+    required-level: 30
+    base-cost: 500.0
+vanilla-enchantments:
+  unbreaking:
+    name: '<yellow>Unbreaking'
+    description: '<gray>Increases item durability'
+  mending:
+    name: '<green>Mending'
+    description: '<gray>Uses XP to mend tools and armor'
+  vanishing_curse:
+    name: '<red>Curse of Vanishing'
+    description: '<red>Item disappears on death'
+  sharpness:
+    name: '<gold>Sharpness'
+    description: '<gray>Increases melee damage'
+  smite:
+    name: '<gold>Smite'
+    description: '<gray>Increases damage to undead'
+  bane_of_arthropods:
+    name: '<gold>Bane of Arthropods'
+    description: '<gray>Increases damage to arthropods'
+  knockback:
+    name: '<gold>Knockback'
+    description: '<gray>Increases knockback'
+  fire_aspect:
+    name: '<gold>Fire Aspect'
+    description: '<gray>Sets target on fire'
+  looting:
+    name: '<gold>Looting'
+    description: '<gray>Increases mob loot drops'
+  sweeping_edge:
+    name: '<gold>Sweeping Edge'
+    description: '<gray>Increases sweeping attack damage'
+  efficiency:
+    name: '<aqua>Efficiency'
+    description: '<gray>Increases mining speed'
+  fortune:
+    name: '<aqua>Fortune'
+    description: '<gray>Increases block drops'
+  silk_touch:
+    name: '<aqua>Silk Touch'
+    description: '<gray>Mines blocks directly'
+  protection:
+    name: '<blue>Protection'
+    description: '<gray>Reduces most types of damage'
+  fire_protection:
+    name: '<blue>Fire Protection'
+    description: '<gray>Reduces fire damage'
+  blast_protection:
+    name: '<blue>Blast Protection'
+    description: '<gray>Reduces explosion damage'
+  projectile_protection:
+    name: '<blue>Projectile Protection'
+    description: '<gray>Reduces projectile damage'
+  feather_falling:
+    name: '<blue>Feather Falling'
+    description: '<gray>Reduces fall damage'
+  thorns:
+    name: '<blue>Thorns'
+    description: '<gray>Damages attackers'
+  respiration:
+    name: '<blue>Respiration'
+    description: '<gray>Extends underwater breathing time'
+  depth_strider:
+    name: '<blue>Depth Strider'
+    description: '<gray>Increases underwater movement speed'
+  aqua_affinity:
+    name: '<blue>Aqua Affinity'
+    description: '<gray>Increases underwater mining speed'
+  frost_walker:
+    name: '<blue>Frost Walker'
+    description: '<gray>Turns water beneath you into ice'
+  soul_speed:
+    name: '<blue>Soul Speed'
+    description: '<gray>Increases speed on soul sand/soil'
+  binding_curse:
+    name: '<red>Curse of Binding'
+    description: '<red>Prevents removal of armor'
+  power:
+    name: '<light_purple>Power'
+    description: '<gray>Increases arrow damage'
+  punch:
+    name: '<light_purple>Punch'
+    description: '<gray>Increases arrow knockback'
+  flame:
+    name: '<light_purple>Flame'
+    description: '<gray>Arrows set targets on fire'
+  infinity:
+    name: '<light_purple>Infinity'
+    description: '<gray>Shooting consumes no arrows'
+  quick_charge:
+    name: '<dark_purple>Quick Charge'
+    description: '<gray>Decreases crossbow reload time'
+  multishot:
+    name: '<dark_purple>Multishot'
+    description: '<gray>Shoots 3 arrows at once'
+  piercing:
+    name: '<dark_purple>Piercing'
+    description: '<gray>Arrows pierce through entities'
+  impaling:
+    name: '<aqua>Impaling'
+    description: '<gray>Increases damage to aquatic mobs'
+  loyalty:
+    name: '<aqua>Loyalty'
+    description: '<gray>Trident returns after being thrown'
+  channeling:
+    name: '<aqua>Channeling'
+    description: '<gray>Summons lightning during thunderstorms'
+  riptide:
+    name: '<aqua>Riptide'
+    description: '<gray>Propels player when thrown in water or rain'
+  lure:
+    name: '<green>Lure'
+    description: '<gray>Decreases time until a fish bites'
+  luck_of_the_sea:
+    name: '<green>Luck of the Sea'
+    description: '<gray>Increases chances of catching treasure'
+# Specialized book types and their properties
+specialized_books:
+  enabled: true
+  types:
+    - sword_book
+    - axe_book
+    - pickaxe_book
+    - shovel_book
+    - hoe_book
+    - bow_book
+    - crossbow_book
+    - trident_book
+    - helmet_book
+    - chestplate_book
+    - leggings_book
+    - boots_book
+enchanted-book-lore:
+  show-applicable-items: true
+  header: "<gray>Applicable to:"
+  # {item} will be replaced with the item name
+  item-format: "  <dark_gray>- <aqua>{item}"
+  # {category} will be replaced with the category name (for vanilla enchants)
+  category-format: "  <dark_gray>- <aqua>{category}"
+  # Max items to show before showing "and ... more"
+  limit: 8
+  # {count} will be replaced with the remaining item count
+  more-format: "  <dark_gray>- <gray>and {count} more..."
+  # Item configuration for each book type
+  items:
+    sword_book:
+      material: ENCHANTED_BOOK
+      display_name: "&c&lSword Enchantment Book"
+      lore:
+        - "&7A specialized book containing"
+        - "&7enchantments for swords"
+        - ""
+        - "&ePlace in enchanting table to use"
+      custom_model_data: 1001
+
+    axe_book:
+      material: ENCHANTED_BOOK
+      display_name: "&6&lAxe Enchantment Book"
+      lore:
+        - "&7A specialized book containing"
+        - "&7enchantments for axes"
+        - ""
+        - "&ePlace in enchanting table to use"
+      custom_model_data: 1002
+
+    pickaxe_book:
+      material: ENCHANTED_BOOK
+      display_name: "&9&lPickaxe Enchantment Book"
+      lore:
+        - "&7A specialized book containing"
+        - "&7enchantments for pickaxes"
+        - ""
+        - "&ePlace in enchanting table to use"
+      custom_model_data: 1003
+
+    shovel_book:
+      material: ENCHANTED_BOOK
+      display_name: "&e&lShovel Enchantment Book"
+      lore:
+        - "&7A specialized book containing"
+        - "&7enchantments for shovels"
+        - ""
+        - "&ePlace in enchanting table to use"
+      custom_model_data: 1004
+
+    hoe_book:
+      material: ENCHANTED_BOOK
+      display_name: "&a&lHoe Enchantment Book"
+      lore:
+        - "&7A specialized book containing"
+        - "&7enchantments for hoes"
+        - ""
+        - "&ePlace in enchanting table to use"
+      custom_model_data: 1005
+
+    bow_book:
+      material: ENCHANTED_BOOK
+      display_name: "&d&lBow Enchantment Book"
+      lore:
+        - "&7A specialized book containing"
+        - "&7enchantments for bows"
+        - ""
+        - "&ePlace in enchanting table to use"
+      custom_model_data: 1006
+
+    crossbow_book:
+      material: ENCHANTED_BOOK
+      display_name: "&5&lCrossbow Enchantment Book"
+      lore:
+        - "&7A specialized book containing"
+        - "&7enchantments for crossbows"
+        - ""
+        - "&ePlace in enchanting table to use"
+      custom_model_data: 1007
+
+    trident_book:
+      material: ENCHANTED_BOOK
+      display_name: "&b&lTrident Enchantment Book"
+      lore:
+        - "&7A specialized book containing"
+        - "&7enchantments for tridents"
+        - ""
+        - "&ePlace in enchanting table to use"
+      custom_model_data: 1008
+
+    helmet_book:
+      material: ENCHANTED_BOOK
+      display_name: "&f&lHelmet Enchantment Book"
+      lore:
+        - "&7A specialized book containing"
+        - "&7enchantments for helmets"
+        - ""
+        - "&ePlace in enchanting table to use"
+      custom_model_data: 1009
+
+    chestplate_book:
+      material: ENCHANTED_BOOK
+      display_name: "&8&lChestplate Enchantment Book"
+      lore:
+        - "&7A specialized book containing"
+        - "&7enchantments for chestplates"
+        - ""
+        - "&ePlace in enchanting table to use"
+      custom_model_data: 1010
+
+    leggings_book:
+      material: ENCHANTED_BOOK
+      display_name: "&7&lLeggings Enchantment Book"
+      lore:
+        - "&7A specialized book containing"
+        - "&7enchantments for leggings"
+        - ""
+        - "&ePlace in enchanting table to use"
+      custom_model_data: 1011
+
+    boots_book:
+      material: ENCHANTED_BOOK
+      display_name: "&2&lBoots Enchantment Book"
+      lore:
+        - "&7A specialized book containing"
+        - "&7enchantments for boots"
+        - ""
+        - "&ePlace in enchanting table to use"
+      custom_model_data: 1012
+
+# Grindstone settings
+grindstone:
+  # XP multiplier when disenchanting books
+  xp-multiplier: 0.5
+
+  # Allow disenchanting specialized books
+  allow-specialized-disenchant: true
+
+# Rune system settings
+runes:
+  # Enable rune system
+  enabled: true
+  # Power Rune settings
+  power-rune:
+    enabled: true
+    cost: 1000.0
+    display_name: "§6§lPower Rune"
+    lore:
+      - "§7Upgrades all enchantments on a tool"
+      - "§7by 1 level (if not at maximum)"
+      - ""
+      - "§eApply at an anvil like an enchanted book"
+    material: NETHER_STAR
+    custom_model_data: 2001
+
+  # Protection Rune settings
+  protection-rune:
+    enabled: true
+    cost: 2000.0
+    max-applications: 1
+    display_name: "§b§lProtection Rune"
+    lore:
+      - "§7Prevents a tool from being destroyed"
+      - "§7when it reaches zero durability"
+      - "§7Instead, the tool will shatter"
+      - ""
+      - "§eApply at an anvil like an enchanted book"
+    material: TOTEM_OF_UNDYING
+    custom_model_data: 2002
+
+  # General rune settings
+  allow-stacking: false
+  shatter-message: "§c§lSHATTERED - Apply another Protection Rune to protect again"
+  protection-message: "§b§lProtection Rune Applied - This item is protected from breaking"
+
+# Custom Enchantments
+custom-enchantments:
+  # Auto Smelting enchantment
+  auto-smelting:
+    enabled: true
+    probability: 100.0  # Percentage chance to trigger (0-100)
+    show-message: true
+    experience-multiplier: 1.0
+
+  # Backstab enchantment
+  backstab:
+    enabled: true
+    show-message: true
+    base-damage-bonus: 0.2  # 20% base bonus
+    level-damage-bonus: 0.1  # 10% per level
+
+  # Lucky Orb enchantment
+  lucky-orb:
+    enabled: true
+    show-message: true
+    base-exp-bonus: 0.5   # 50% base bonus
+    level-exp-bonus: 0.25  # 25% per level
+
+  # Tier selection buttons
+  tier-buttons:
+    tier1:
+      material: "EMERALD"
+      custom-model-data: 1001
+      display-name: "§a§lTier I Enchanting"
+      lore:
+        - "§7Level Requirement: §e5+"
+        - "§7Base Cost: §6$100"
+        - "§7Basic enchantments"
+        - ""
+        - "§aClick to select!"
+    tier2:
+      material: "DIAMOND"
+      custom-model-data: 1002
+      display_name: "§b§lTier II Enchanting"
+      lore:
+        - "§7Level Requirement: §e15+"
+        - "§7Base Cost: §6$250"
+        - "§7Advanced enchantments"
+        - ""
+        - "§aClick to select!"
+    tier3:
+      material: "NETHERITE_INGOT"
+      custom-model-data: 1003
+      display_name: "§5§lTier III Enchanting"
+      lore:
+        - "§7Level Requirement: §e30+"
+        - "§7Base Cost: §6$500"
+        - "§7Legendary enchantments"
+        - ""
+        - "§aClick to select!"
+
+  # Other GUI elements
+  enchant-index-button:
+    material: "BOOK"
+    custom-model-data: 1010
+    display_name: "§6§lEnchantment Index"
+    lore:
+      - "§7Browse all available enchantments"
+      - "§7Learn about enchantment effects"
+      - ""
+      - "§eClick to open!"
+
+  # Decoration items
+  decoration:
+    material: "GRAY_STAINED_GLASS_PANE"
+    custom-model-data: 0
+    display_name: " "
+
+# Sound effects
+sounds:
+  enchant-success: "BLOCK_ENCHANTMENT_TABLE_USE"
+  enchant-failure: "ENTITY_VILLAGER_NO"
+  book-create: "ITEM_BOOK_PAGE_TURN"
+  gui-click: "UI_BUTTON_CLICK"
+  gui-open: "BLOCK_CHEST_OPEN"
+  anvil-enchant: "BLOCK_ANVIL_USE"
+  grindstone-disenchant: "BLOCK_GRINDSTONE_USE"
+
+# Anvil settings
+anvil:
+  # Allow custom enchanted books in anvils
+  allow-custom-books: true
+
+  # Validate enchantment compatibility
+  validate-compatibility: true
+
+  # Show detailed error messages
+  detailed-errors: true
+
+# Specialized book settings
+specialized-books:
+  # Enable custom model data for textures
+  enable-custom-textures: true
+
+  # Starting custom model data value
+  base-custom-model-data: 1000
+
+  # Book types configuration
+  enabled-types:
+    - sword_book
+    - axe_book
+    - pickaxe_book
+    - shovel_book
+    - hoe_book
+    - bow_book
+    - crossbow_book
+    - trident_book
+    - helmet_book
+    - chestplate_book
+    - leggings_book
+    - boots_book
+
+# Messages
+messages:
+  prefix: "§6[SurealmsEnchant]§r "
+
+  success:
+    enchant-applied: "§aEnchantment applied successfully!"
+    book-created: "§aEnchanted book created successfully!"
+    book-received: "§aYou received a specialized book!"
+    gui-opened: "§aOpening enchanting table...!"
+    disenchant-success: "§aBook disenchanted successfully!"
+
+  error:
+    invalid-book: "§cYou can only place books or specialized books here!"
+    invalid-item: "§cThis item cannot be enchanted!"
+    no-book: "§cPlease place a book first!"
+    book-already-enchanted: "§cThis book is already enchanted!"
+    insufficient-money: "§cNot enough money! Need: %cost%"
+    insufficient-level: "§cNot enough XP levels! Need: %level%!"
+    incompatible-enchant: "§cThis enchantment is not compatible with this item!"
+    conflicting-enchant: "§cThis enchantment conflicts with an existing enchantment!"
+    already-enchanted: "§cThis item already has this enchantment!"
+    player-only: "§cThis command can only be used by players!"
+    invalid-args: "§cInvalid arguments! Use /enchant help for more information."
+    no-permission: "§cYou don't have permission to use this command!"
+    unknown-book-type: "§cUnknown book type: %type%"
+
+  info:
+    vault-not-found: "§eVault not found - money costs disabled"
+    economy-disabled: "§eEconomy features are disabled"
+    xp-gained: "§a+%amount% XP"
+
+tome-of-renewal:
+  material: "BOOK"
+  custom-model-data: 1013
+  display_name: "<!italic><#ffD700>Tome of Renewal"
+  lore:
+    - "<!italic><gray>Place this tome in the enchanting"
+    - "<!italic><gray>table to reset your offered"
+    - "<!italic><gray>enchantments for a new roll."
+  success-message: "<green>Your enchantments have been renewed!</green>"
+
+ashes:
+  material: "GRAY_DYE"
+  custom_model_data: 1014
+  display_name: "<!italic><#A9A9A9>Ashes"
+  lore:
+    - "<!italic><gray>Place in an anvil with an"
+    - "<!italic><gray>enchanted book to increase"
+    - "<!italic><gray>the success chance by 5%."
+  chance-modifier: 5.0
+
+anvil-failure:
+  enabled: true
+  # Use 'namespace:key' format, for example: 'minecraft:cobblestone'
+  new-item-model: "minecraft:cobblestone"
+  prevent-usage: true
+  usage-denied-message: "<red>This item is broken and cannot be used!"

@@ -1,0 +1,441 @@
+# SurealmsEnchant GUI Configuration
+# Configure all GUI elements, titles, slots, items, and custom model data
+
+enchanting_table:
+  title: "&6&lEnchanting Table &8[&e{tier1_enchant}&8/&e{tier2_enchant}&8/&e{tier3_enchant}&8]"
+  size: 54
+  items:
+    border:
+      material: BLACK_STAINED_GLASS_PANE
+      display_name: " "
+      custom_model_data: 1001
+      nbt_id: "gui_border"
+      slots: [0, 1, 2, 3, 4, 9, 18, 27, 36, 45, 46, 47, 48, 49, 50, 51, 52, 53]
+    
+    input_slot:
+      # This slot stays empty for players to place books
+      # No material/display_name needed - just specify the slot position
+      slot: 31  # Input slot at position 31 (bottom center, safe from conflicts)
+      # Valid slots: 0-53 for 54-slot inventory
+    
+    tier_1_display:
+      material: LIME_STAINED_GLASS_PANE
+      display_name: "&a&lTier 1 - Basic"
+      lore:
+        - "&7Basic enchantments"
+        - "&7Cost: &6$500-1000"
+        - "&7Required Level: &e5"
+      custom_model_data: 1003
+      nbt_id: "tier_1_display"
+      slot: 4
+    
+    tier_2_display:
+      material: LIGHT_BLUE_STAINED_GLASS_PANE
+      display_name: "&b&lTier 2 - Advanced"
+      lore:
+        - "&7Advanced enchantments"
+        - "&7Cost: &6$1500-3000"
+        - "&7Required Level: &e15"
+      custom_model_data: 1004
+      nbt_id: "tier_2_display"
+      slot: 13
+    
+    tier_3_display:
+      material: MAGENTA_STAINED_GLASS_PANE
+      display_name: "&d&lTier 3 - Legendary"
+      lore:
+        - "&7Legendary enchantments"
+        - "&7Cost: &6$5000-10000"
+        - "&7Required Level: &e30"
+      custom_model_data: 1005
+      nbt_id: "tier_3_display"
+      slot: 22  # Back to 22 since input slot moved to 10
+    
+    enchant_index_button:
+      material: ENCHANTED_BOOK
+      display_name: "&6&lEnchantment Index"
+      lore:
+        - "&7View all available enchantments"
+        - "&7and their descriptions"
+        - ""
+        - "&eClick to open!"
+      custom_model_data: 1006
+      nbt_id: "enchant_index_button"
+      slot: 40
+    
+    close_button:
+      material: BARRIER
+      display_name: "&c&lClose"
+      lore:
+        - "&7Close this menu"
+      custom_model_data: 1007
+      nbt_id: "close_button"
+      slot: 44
+  
+  # Enchantment option slots
+  tier_1_slots: [12,  13, 14, 15, 16, 17]
+  tier_2_slots: [21, 22, 23, 24, 25, 26]
+  tier_3_slots: [30, 31, 32, 33, 34, 35]
+
+  # Tier enchantment item configurations
+  tier_1_enchant_item:
+    material: ENCHANTED_BOOK
+    custom_model_data: 1010
+    nbt_id: "tier_1_enchant"
+  tier_3_enchant_item_last:
+    material: NETHER_STAR
+    custom_model_data: 1112
+    nbt_id: "tier_3_enchant_last"
+  tier_2_enchant_item:
+    material: ENCHANTED_BOOK
+    custom_model_data: 1011
+    nbt_id: "tier_2_enchant"
+
+  tier_3_enchant_item:
+    material: ENCHANTED_BOOK
+    custom_model_data: 1012
+    nbt_id: "tier_3_enchant"
+  tier_1_enchant_item_last:
+    material: NETHER_STAR
+    custom_model_data: 1110
+    nbt_id: "tier_1_enchant_last"
+  tier_2_enchant_item_last:
+    material: NETHER_STAR
+    custom_model_data: 1111
+    nbt_id: "tier_2_enchant_last"
+enchant_index:
+  title: "&6&lEnchantment Index &8[&e%surealmsenchant_total_enchants%&8 active]"
+  size: 54
+  items:
+    border:
+      material: PURPLE_STAINED_GLASS_PANE
+      display_name: " "
+      custom_model_data: 2001
+      nbt_id: "index_border"
+      slots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 45, 46, 47, 51, 52]
+    
+    filter_all:
+      material: BOOK
+      display_name: "&e&lAll Enchantments"
+      lore:
+        - "&7Show all available enchantments"
+        - ""
+        - "&eClick to filter!"
+      custom_model_data: 2002
+      nbt_id: "filter_all"
+      slot: 9
+    
+    filter_tier_1:
+      material: LIME_DYE
+      display_name: "&a&lTier 1 Only"
+      lore:
+        - "&7Show only Tier 1 enchantments"
+        - ""
+        - "&eClick to filter!"
+      custom_model_data: 2003
+      nbt_id: "filter_tier_1"
+      slot: 10
+    
+    filter_tier_2:
+      material: LIGHT_BLUE_DYE
+      display_name: "&b&lTier 2 Only"
+      lore:
+        - "&7Show only Tier 2 enchantments"
+        - ""
+        - "&eClick to filter!"
+      custom_model_data: 2004
+      nbt_id: "filter_tier_2"
+      slot: 11
+    
+    filter_tier_3:
+      material: MAGENTA_DYE
+      display_name: "&d&lTier 3 Only"
+      lore:
+        - "&7Show only Tier 3 enchantments"
+        - ""
+        - "&eClick to filter!"
+      custom_model_data: 2005
+      nbt_id: "filter_tier_3"
+      slot: 12
+    
+    filter_excellent:
+      material: NETHER_STAR
+      display_name: "&6&lExcellentEnchants Only"
+      lore:
+        - "&7Show only ExcellentEnchants"
+        - "&7custom enchantments"
+        - ""
+        - "&eClick to filter!"
+      custom_model_data: 2006
+      nbt_id: "filter_excellent"
+      slot: 13
+    
+    search_button:
+      material: COMPASS
+      display_name: "&e&lSearch Enchantments"
+      lore:
+        - "&7Search for specific enchantments"
+        - "&7by name or description"
+        - ""
+        - "&eClick to search!"
+      custom_model_data: 2007
+      nbt_id: "search_button"
+      slot: 14
+    
+    back_button:
+      material: ARROW
+      display_name: "&c&lBack"
+      lore:
+        - "&7Return to Enchanting Table"
+      custom_model_data: 2008
+      nbt_id: "back_button"
+      slot: 45
+
+    close_button:
+      material: BARRIER
+      display_name: "&c&lClose"
+      lore:
+        - "&7Close this menu"
+      custom_model_data: 2012
+      nbt_id: "close_button"
+      slot: 53
+    
+    previous_page:
+      material: PAPER
+      display_name: "&e&l← Previous Page"
+      lore:
+        - "&7Go to previous page"
+      custom_model_data: 2009
+      nbt_id: "previous_page"
+      slot: 48
+    
+    page_info:
+      material: MAP
+      display_name: "&6&lPage {current}/{total}"
+      lore:
+        - "&7Current page: &e{current}"
+        - "&7Total pages: &e{total}"
+        - "&7Total enchantments: &e{count}"
+      custom_model_data: 2010
+      nbt_id: "page_info"
+      slot: 49
+    
+    next_page:
+      material: PAPER
+      display_name: "&e&lNext Page →"
+      lore:
+        - "&7Go to next page"
+      custom_model_data: 2011
+      nbt_id: "next_page"
+      slot: 50
+  
+  # Content area for enchantments
+  content_slots: [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44]
+  enchantments_per_page: 27
+
+# Rune Application GUI
+rune_application:
+  title: "&5&lRune Application Table"
+  size: 54
+  items:
+    border:
+      material: PURPLE_STAINED_GLASS_PANE
+      display_name: " "
+      custom_model_data: 3001
+      nbt_id: "rune_border"
+      slots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 45, 46, 47, 48, 49, 50, 51, 52, 53]
+
+    # item_slot and rune_slot removed - slots 20 and 24 are now empty for players to place items
+    # slot: 20 is reserved for item placement
+    # slot: 24 is reserved for rune placement
+
+    apply_button:
+      material: ANVIL
+      display_name: "&a&lApply Rune"
+      lore:
+        - "&7Click to apply the rune"
+        - "&7to your item"
+        - ""
+        - "&aSuccess Rate: &e{success_rate}%"
+        - "&aCost: &6{cost}"
+        - ""
+        - "&eClick to apply!"
+      custom_model_data: 3004
+      nbt_id: "apply_button"
+      slot: 22
+
+    preview_slot:
+      material: GLASS
+      display_name: "&6&lPreview Result"
+      lore:
+        - "&7This shows what your item"
+        - "&7will look like after applying"
+        - "&7the rune successfully"
+      custom_model_data: 3005
+      nbt_id: "preview_slot"
+      slot: 31
+
+    success_indicator:
+      material: LIME_CONCRETE
+      display_name: "&a&lSuccess Rate"
+      lore:
+        - "&7Current success rate:"
+        - "&a{success_rate}%"
+        - ""
+        - "&7Factors affecting success:"
+        - "&7- Item durability"
+        - "&7- Rune quality"
+        - "&7- Player experience"
+      custom_model_data: 3006
+      nbt_id: "success_indicator"
+      slot: 29
+
+    cost_indicator:
+      material: GOLD_INGOT
+      display_name: "&6&lApplication Cost"
+      lore:
+        - "&7Cost to apply rune:"
+        - "&6{cost}"
+        - ""
+        - "&7Additional costs may apply"
+        - "&7for high-tier runes"
+      custom_model_data: 3007
+      nbt_id: "cost_indicator"
+      slot: 33
+
+    help_button:
+      material: BOOK
+      display_name: "&e&lRune Guide"
+      lore:
+        - "&7Learn about runes and"
+        - "&7how to use them effectively"
+        - ""
+        - "&eClick for help!"
+      custom_model_data: 3008
+      nbt_id: "help_button"
+      slot: 49
+
+    back_button:
+      material: ARROW
+      display_name: "&c&lBack"
+      lore:
+        - "&7Return to main menu"
+      custom_model_data: 3009
+      nbt_id: "back_button"
+      slot: 45
+
+# Recycling Menu for converting enchanted books to ashes
+recycling_menu:
+  title: "&2&lRecycle Enchants"
+  size: 27
+  items:
+    border:
+      material: GREEN_STAINED_GLASS_PANE
+      display_name: " "
+      custom_model_data: 4001
+      nbt_id: "recycle_border"
+      slots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+    
+    # Slot 10 is for the enchanted book input
+    # Slot 13 is for the confirm button
+    # Slot 16 is for the ashes output
+    
+    info_book:
+      material: BOOK
+      display_name: "&e&lHow to Recycle"
+      lore:
+        - "&7Place an enchanted book on the left."
+        - "&7It will be converted into Ashes."
+        - "&7Ashes can be used to improve"
+        - "&7your chances with Chance Enchantments."
+      custom_model_data: 4002
+      nbt_id: "recycle_info"
+      slot: 4
+
+    confirm_button:
+      material: ANVIL
+      display_name: "&a&lRecycle"
+      lore:
+        - "&7Convert the book into Ashes."
+        - "&c&lThis action is irreversible!"
+      custom_model_data: 4003
+      nbt_id: "recycle_confirm"
+      slot: 13
+
+# Enchantment display configuration
+enchantment_display:
+  tier_colors:
+    1: "&a"
+    2: "&b"
+    3: "&d"
+
+  source_colors:
+    builtin: "&a"
+    excellent: "&6"
+
+  rarity_colors:
+    COMMON: "&f"
+    UNCOMMON: "&a"
+    RARE: "&b"
+    EPIC: "&d"
+    LEGENDARY: "&6"
+
+  special_indicators:
+    treasure: "&6&l✦ TREASURE"
+    cursed: "&c&l✗ CURSED"
+    excellent: "&6&l⭐ EXCELLENT"
+
+  # Tier-specific enchantment book materials and models
+  tier_materials:
+    1: ENCHANTED_BOOK
+    2: ENCHANTED_BOOK
+    3: ENCHANTED_BOOK
+
+  tier_custom_models:
+    1: 1010  # Basic enchantment book model
+    2: 1011  # Advanced enchantment book model
+    3: 1012  # Legendary enchantment book model
+
+  # Glow effects for tiers
+  tier_glow:
+    1: false
+    2: true
+    3: true
+
+# Sound effects
+sounds:
+  click: "UI_BUTTON_CLICK"
+  enchant_success: "BLOCK_ENCHANTMENT_TABLE_USE"
+  enchant_fail: "ENTITY_VILLAGER_NO"
+  page_turn: "ITEM_BOOK_PAGE_TURN"
+  open_gui: "BLOCK_CHEST_OPEN"
+  close_gui: "BLOCK_CHEST_CLOSE"
+
+# Animation settings
+animations:
+  enchant_glow:
+    enabled: true
+    duration: 20
+    interval: 2
+  
+  page_transition:
+    enabled: true
+    duration: 10
+
+# Special items configuration
+special_items:
+  ashes:
+    material: BOOK
+    display_name: "&7Ashes"
+    lore:
+      - "&7The remnants of a powerful enchantment."
+      - "&7Use these to improve the success"
+      - "&7rate of Chance Enchantments."
+    custom_model_data: 5001
+    nbt_id: "ashes_item"
+  
+  shattered_item:
+    name: "&c&lShattered {item_name}"
+    custom_model_data: 9999
+    # The lore for the shattered item will likely be dynamically generated
+    # to include details about the original item.

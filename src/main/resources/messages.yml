@@ -1,0 +1,145 @@
+# SurealmsEnchant Messages
+#
+# this file contains all the user-facing messages for the SurealmsEnchant plugin.
+# for example color: <red>This is red text.</red> or <gradient:#ff0000:#00ff00>This is a gradient.</gradient>
+#
+# placeholders are indicated by <placeholder_name>. For example: <player> will be replaced by the player's name.
+
+# plugin general messages
+plugin:
+  reload: "<green>Plugin configuration and messages have been reloaded."
+  prefix: "<dark_gray>[<gold>SurealmsEnchant<dark_gray>] <reset>"
+
+grindstone:
+  disenchant_specialized: "&aDisenchanted! Returned {book_type}"
+  disenchant_regular: "&aDisenchanted! Returned regular book"
+  xp_gain: "&a+{xp} XP"
+# command messages
+commands:
+  no_permission: "<red>You do not have permission to use this command."
+  player_only: "<red>This command can only be executed by a player."
+  invalid_arguments: "<red>Invalid arguments! Use /se help for more information."
+  player_not_found: "<red>Player not found: <player>"
+  open:
+    enchanting_table: "<green>Opening enchanting table..."
+    enchant_index: "<green>Opening enchant index..."
+    rune_gui: "<light_purple>Opening rune application table..."
+  book:
+    usage: "<red>Usage: /se book <type|list>"
+    list_header: "<gold><bold>=== Available Specialized Books ==="
+    list_item: "<yellow><id> <gray>- <white><name>"
+    list_footer: "<gray>Use /enchant book <type> to get a specific book"
+    list_suggestion: "<gray>Use /enchant book list to see available types"
+    not_found: "<red>The specialized book type '<type>' was not found."
+    received: "<green>You have received a <book_name><green>!"
+  tome:
+    usage: "<red>Usage: /surealms tome [player] [amount]"
+    received_sender: "<green>You have given <amount> Tome of Renewal to <player>."
+    received_target: "<green>You have received <amount> Tome of Renewal."
+  rune:
+    usage: "<red>Usage: /se rune <type|list>"
+    list_header: "<gold><bold>=== Available Runes ==="
+    list_item: "<yellow><id> <gray>- <white><name>"
+    list_item_description: "  <dark_gray><description>"
+    list_footer: "<gray>Use /enchant rune <type> to get a specific rune"
+    list_suggestion: "<gray>Use /enchant rune list to see available types"
+    not_found: "<red>The rune type '<type>' was not found."
+    received: "<green>You have received a <rune_name><green>!"
+  custom:
+    usage: "<red>Usage: /se custom <enchant> <item> [level]"
+    list_header: "<gold><bold>=== Available Custom Enchantments ==="
+    list_item: "<yellow><enchant> <gray>- <white><description>"
+    list_footer: "<gray>Use /enchant custom <enchant> <item> [level] to get items"
+    list_suggestion: "<gray>Use /enchant custom list to see available enchantments"
+    not_found: "<red>Unknown custom enchantment: <enchant>"
+    invalid_item: "<red>Invalid item type for <enchant>! Use: <items>"
+    received: "<green>You received a <item> with <enchant> <level>!"
+  vanilla:
+    usage: "<red>Usage: /se vanilla <enchant> <item> [level]"
+    list_header: "<gold><bold>=== Available Vanilla-Style Enchantments ==="
+    list_item: "<yellow><enchant> <gray>- <white><description>"
+    list_footer: "<gray>Use /enchant vanilla <enchant> <item> [level] to get items"
+    list_info: "<gray>These work like real vanilla enchantments!"
+    list_suggestion: "<gray>Use /enchant vanilla list to see available enchantments"
+    not_found: "<red>Unknown vanilla enchantment: <enchant>"
+    not_available: "<red><enchant> enchantment is not available! Make sure EnchantmentModifier API is installed."
+    invalid_item: "<red>Invalid item type for <enchant>! Use: <items>"
+    received: "<green>You received a <item> with vanilla-style <enchant> <level>!"
+  datapack:
+    usage: "<red>Usage: /se datapack <generate|complete|status|test>"
+    generate:
+      start: "<yellow>Generating datapack..."
+      success: "<green>Datapack generated successfully! Check the 'generated_datapack' folder."
+      fail: "<red>Failed to generate datapack: <error>"
+    complete:
+      start: "<yellow>Generating complete datapack..."
+      success: "<green>Complete datapack generated successfully! Check the 'surealms_enchantments_datapack' folder."
+      fail: "<red>Failed to generate complete datapack: <error>"
+    status:
+      header_available: "<green><bold>Datapack Enchantments Available:"
+      item: "<gray>- <yellow><key> <gray>(Max Level: <max_level>)"
+      header_unavailable: "<red><bold>No Datapack Enchantments Found. Generate and install a datapack."
+    test:
+      start: "<green><bold>Testing Datapack Enchantments:"
+      item_received: "<gray>+ <white><item> with <enchant> <level>"
+      not_available: "<red>No datapack enchantments available for testing. Generate and install a datapack first."
+  help: |-
+    <gold><bold>=== SurealmsEnchant Help ===</bold>
+    <yellow>/se <gray>- Open the enchanting table
+    <yellow>/se index <gray>- View all available enchantments
+    <yellow>/se runes <gray>- Open rune application table
+    <yellow>/se book <type> <gray>- Get a specialized book
+    <yellow>/se rune <type> <gray>- Get a rune
+    <yellow>/se reload <gray>- Reload the plugin
+    <yellow>/se help <gray>- Show this help message
+
+# GUI Messages
+gui:
+  enchanting_table:
+    title: "Enchanting Table"
+    tier_item:
+      name: "<green>Tier <tier> Enchantments"
+      lore:
+        - "<gray>Click to see enchantments"
+        - "<gray>for this tier."
+    empty_slot:
+      name: "<gray> "
+  enchant_index:
+    title: "Enchantment Index"
+    search_coming_soon: "<yellow>Search functionality coming soon!"
+    details:
+      header: "<gold><bold>Enchantment Details: <white><name>"
+      id: "<yellow>ID: <gray><id>"
+      tier: "<yellow>Tier: <gray><tier>"
+      max_level: "<yellow>Max Level: <gray><max_level>"
+      source: "<yellow>Source: <gray><source>"
+      rarity: "<yellow>Rarity: <gray><rarity>"
+      treasure_indicator: "<aqua>This is a Treasure enchantment."
+      cursed_indicator: "<red>This is a Cursed enchantment."
+      description_header: "<yellow>Description:"
+      description_line: "<gray><line>"
+      footer: "<dark_gray>--------------------"
+  specialized_book:
+    compatible_with_header: "<gray>Compatible with:"
+    compatible_with_item: "  <dark_gray>- <gray><material>"
+    compatible_with_more: "  <dark_gray>- <gray>and <count> more..."
+    usage_line_1: "<gray>Place in an Enchanting Table"
+    usage_line_2: "<gray>to create enchanted books"
+
+# Enchanting Listener Messages
+enchanting:
+  success: "<green>You have successfully enchanted your item with <enchantment><green>!"
+  error:
+    too_many_items: "<red>You can only place one item at a time."
+    invalid_item: "<red>This item cannot be placed in the enchanting table."
+    input_slot_occupied: "<red>The input slot is already occupied."
+    only_books_allowed: "<red>Only books can be shift-clicked into the enchanting table."
+    gui_open_fail: "<red>There was an error opening the GUI."
+    no_book_in_slot: "<red>You must place a book in the enchanting table first."
+    option_parse_fail: "<red>Could not read the enchantment from this option. Please try again."
+    withdraw_fail: "<red>Failed to withdraw funds. Please check your balance and try again."
+    insufficient_funds: "<red>You don't have enough money. Requires <required>, but you have <available>."
+    insufficient_levels: "<red>You don't have enough experience levels. Requires level <required>, but you are level <current>."
+    already_enchanted: "<red>This book is already enchanted."
+    unknown: "<red>An unknown error occurred during enchanting."
+    no_permission_use: "<red> Hãy"

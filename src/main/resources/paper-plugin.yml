@@ -1,0 +1,78 @@
+name: SurealmsEnchant
+version: '1.0-SNAPSHOT'
+main: me.sanenuyan.surealmsEnchant.SurealmsEnchant
+api-version: '1.21'
+description: Advanced enchanting system with specialized books and economy integration
+author: sanenuyan, Quinx # <<< (Was Leave Team)
+website: https://github.com/sanenuyan/SurealmsEnchant
+dependencies:
+  server:
+    PlaceholderAPI:
+      load: BEFORE #
+      required: false
+    Essentials:
+      load: BEFORE #
+      required: false
+    ExcellentEnchants:
+      load: BEFORE #
+      required: false
+    Vault:
+      load: BEFORE #
+      required: false
+    packetevents:
+      load: BEFORE #
+      required: false
+depend: 
+  - packetevents
+softdepend: [Vault, MythicMobs, EssentialsX, ExcellentEnchants, MythicMobs]
+
+# commands are registered in Paper plugins
+# see SurealmsEnchant.kt registerCommands() method
+
+permissions:
+  surealms.enchant.*:
+    description: Gives access to all enchant features
+    default: op
+    children:
+      surealms.enchant.use: true
+      surealms.enchant.index: true
+      surealms.enchant.book: true
+      surealms.enchant.rune: true
+      surealms.enchant.custom: true
+      surealms.enchant.vanilla: true
+      surealms.enchant.datapack: true
+      surealms.enchant.admin: true
+
+  surealms.enchant.use:
+    description: Allows player to use the enchanting table
+    default: false
+  surealms.enchant.table:
+    description: Allows player to use the enchanting table
+    default: false
+  surealms.enchant.index:
+    description: Allows player to view the enchant index
+    default: op
+
+  surealms.enchant.book:
+    description: Allows player to get specialized books
+    default: op
+
+  surealms.enchant.rune:
+    description: Allows player to get runes
+    default: op
+
+  surealms.enchant.custom:
+    description: Allows player to get custom enchanted items (NBT-based)
+    default: op
+
+  surealms.enchant.vanilla:
+    description: Allows player to get vanilla-style enchanted items
+    default: op
+
+  surealms.enchant.datapack:
+    description: Allows player to generate and manage datapacks
+    default: op
+
+  surealms.enchant.admin:
+    description: Allows admin commands like reload
+    default: op
